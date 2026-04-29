@@ -1,4 +1,4 @@
-# Genesis AI Backend
+# Genora AI Backend
 
 AI-powered backend service that converts plain-English prompts into structured software architecture outputs such as UI schema, API schema, database schema, authentication roles, and business logic.
 
@@ -6,7 +6,7 @@ AI-powered backend service that converts plain-English prompts into structured s
 
 ## 🚀 Overview
 
-Genesis AI Backend is built with **FastAPI** and designed as a modular AI pipeline.
+Genora AI Backend is built with **FastAPI** and designed as a modular AI pipeline.
 
 It accepts prompts like:
 
