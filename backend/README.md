@@ -1,40 +1,251 @@
-# AI App Generator Backend
+# Genesis AI Backend
 
-This is a complete backend project for an AI App Generator pipeline.
-It parses natural language prompts, converts them into intermediate representation, and generates validated JSON configurations for building web applications.
+AI-powered backend service that converts plain-English prompts into structured software architecture outputs such as UI schema, API schema, database schema, authentication roles, and business logic.
 
-## Setup
+---
 
-1. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+## 🚀 Overview
 
-2. **Configure Environment**
-   ```bash
-   cp .env.example .env
-   ```
-   *Note: Dummy mode is enabled by default (`AI_PROVIDER=dummy`), meaning it will work instantly without any API keys!*
+Genesis AI Backend is built with **FastAPI** and designed as a modular AI pipeline.
 
-3. **Run the Application**
-   ```bash
-   python run.py
-   ```
+It accepts prompts like:
 
-4. **API Documentation**
-   Open your browser and navigate to: [http://localhost:8000/docs](http://localhost:8000/docs)
-   You'll find the interactive Swagger UI to test everything out!
+* Build hospital app with doctors and appointments
+* Create ecommerce platform with products and orders
+* Build school management app with attendance
 
-## How to Switch AI Providers
-Simply open `.env` and update `AI_PROVIDER` to `gemini`, `claude`, or `openai`:
-```env
-AI_PROVIDER=gemini
-API_KEY=your_real_api_key_here
+Then returns structured JSON architecture.
+
+---
+
+## ✨ Features
+
+* Natural language prompt processing
+* Intent extraction pipeline
+* System design generation
+* UI schema generation
+* API endpoint generation
+* Database schema generation
+* Auth roles & permissions
+* Business logic generation
+* Validation engine
+* Auto repair engine
+* Metrics tracking
+* History storage
+* Swagger API docs
+
+---
+
+## 🧱 Tech Stack
+
+* Python 3.11+
+* FastAPI
+* Uvicorn
+* Pydantic
+* SQLite / PostgreSQL (optional)
+* Groq / Gemini / OpenAI provider support
+* REST API
+
+---
+
+## 📁 Project Structure
+
+```text
+backend/
+│── app/
+│   ├── main.py
+│   ├── core/
+│   ├── models/
+│   ├── schemas/
+│   ├── api/routes/
+│   ├── services/
+│   ├── utils/
+│   └── tests/
+│
+│── requirements.txt
+│── .env.example
+│── README.md
+│── run.py
 ```
-The codebase naturally handles the abstraction!
 
-## Testing
-Run tests using pytest:
+---
+
+## ⚙️ Installation
+
+### 1. Clone Repo
+
 ```bash
-pytest app/tests/ -v
+git clone <repo-url>
+cd backend
 ```
+
+### 2. Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### 3. Activate Virtual Environment
+
+#### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+#### Mac / Linux
+
+```bash
+source venv/bin/activate
+```
+
+### 4. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 🔐 Environment Variables
+
+Create `.env`
+
+```env
+AI_PROVIDER=groq
+API_KEY=your_api_key_here
+```
+
+Supported providers:
+
+* groq
+* gemini
+* openai
+* dummy
+
+---
+
+## ▶️ Run Server
+
+```bash
+python run.py
+```
+
+or
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Server runs at:
+
+```text
+http://localhost:8000
+```
+
+Swagger Docs:
+
+```text
+http://localhost:8000/docs
+```
+
+---
+
+## 📡 API Endpoints
+
+### Health Check
+
+```http
+GET /api/v1/health
+```
+
+### Generate Architecture
+
+```http
+POST /api/v1/generate
+```
+
+Request:
+
+```json
+{
+  "prompt": "Build hospital app with doctors and appointments"
+}
+```
+
+### Metrics
+
+```http
+GET /api/v1/metrics
+```
+
+### History
+
+```http
+GET /api/v1/history
+```
+
+---
+
+## 📤 Example Response
+
+```json
+{
+  "success": true,
+  "data": {
+    "app_name": "Hospital Management",
+    "ui": {},
+    "api": {},
+    "database": {},
+    "auth": {}
+  }
+}
+```
+
+---
+
+## 🧠 Pipeline Flow
+
+```text
+Prompt
+→ Intent Extractor
+→ System Designer
+→ Schema Generator
+→ Validator
+→ Repair Engine
+→ Final JSON Output
+```
+
+---
+
+## 🧪 Testing
+
+```bash
+pytest
+```
+
+---
+
+## 🚀 Deployment
+
+Recommended:
+
+* Backend: Render / Railway
+* Frontend: Vercel / Netlify
+
+---
+
+## 📌 Notes
+
+* Use `.env` for API keys
+* Never commit secrets
+* Enable CORS for frontend deployment
+* Free AI providers may have quota limits
+
+---
+
+## 👨‍💻 Author
+
+Genora AI Project
+
+---
