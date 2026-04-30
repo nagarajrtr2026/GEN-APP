@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const apiClient = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: 'https://gen-app-u1l1.onrender.com',
   headers: {
     'Content-Type': 'application/json',
   },
