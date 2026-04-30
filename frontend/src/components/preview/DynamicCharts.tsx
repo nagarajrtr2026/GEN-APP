@@ -1,4 +1,3 @@
-import React from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
 
 const data = [
@@ -11,7 +10,7 @@ const data = [
   { name: 'Jul', value: 3490, secondary: 4300 },
 ];
 
-export const DynamicCharts = ({ pageName }: { pageName: string }) => {
+export const DynamicCharts = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <div className="h-80 p-6 rounded-2xl bg-dark-800 border border-white/5 shadow-lg">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { DynamicTable } from './DynamicTable';
 import { DynamicForm } from './DynamicForm';
 import { DynamicCards } from './DynamicCards';
@@ -16,7 +15,7 @@ export const DynamicRenderer: React.FC<Props> = ({ components, pageName }) => {
       {components.map((comp, idx) => {
         const type = comp.toLowerCase();
         if (type === 'cards') return <DynamicCards key={idx} pageName={pageName} />;
-        if (type === 'charts') return <DynamicCharts key={idx} pageName={pageName} />;
+        if (type === 'charts') return <DynamicCharts key={idx} />;
         if (type === 'table') return <DynamicTable key={idx} pageName={pageName} />;
         if (type === 'form') return <DynamicForm key={idx} pageName={pageName} />;
         if (type === 'calendar') return <DynamicCalendar key={idx} />;

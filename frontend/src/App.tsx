@@ -1,10 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Navbar } from './components/layout/Navbar';
 import { Sidebar } from './components/layout/Sidebar';
 import { LandingPage } from './pages/LandingPage';
-import { DashboardPage } from './pages/DashboardPage';
+import Dashboard from './pages/DashboardPage';
 import { MetricsPage } from './pages/MetricsPage';
 import { HistoryPage } from './pages/HistoryPage';
 import { AboutPage } from './pages/AboutPage';
@@ -20,6 +20,8 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   if (isLanding || isPreview || isDocs) {
     return <>{children}</>;
   }
+
+  if (!children) return <div>Page not found</div>;
 
   return (
     <div className="flex flex-col h-screen">
@@ -46,20 +48,21 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <PageWrapper>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/metrics" element={<MetricsPage />} />
           <Route path="/history" element={<HistoryPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/preview" element={<PreviewLayout />} />
           <Route path="/preview/:pageName" element={<PreviewLayout />} />
           <Route path="/docs" element={<DocsPage />} />
+          <Route path="*" element={<div>Page not found</div>} />
         </Routes>
       </PageWrapper>
-    </Router>
+    </BrowserRouter>
   );
 }
 

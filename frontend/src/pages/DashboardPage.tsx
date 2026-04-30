@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { GlowCard } from '../components/ui/GlowCard';
 import { Send, Copy, Database, LayoutTemplate, ShieldCheck, Monitor, Briefcase } from 'lucide-react';
 
-export const DashboardPage = () => {
+const Dashboard = () => {
   const [prompt, setPrompt] = useState('');
   const { generateApp, isGenerating, currentResult, error } = useAppStore();
   const navigate = useNavigate();
@@ -186,3 +186,5 @@ export const DashboardPage = () => {
     </div>
   );
 };
+
+export default Dashboard;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
-import { ChevronRight, Terminal, Copy, CheckCircle, ArrowUp, ChevronDown, Rocket, LayoutTemplate, Database, Lock, Search, BookOpen, Layers, Code, Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ChevronRight, Terminal, Copy, CheckCircle, ArrowUp, ChevronDown, LayoutTemplate, Database, Search, BookOpen, Layers, Code, Play } from 'lucide-react';
 import { GlowCard } from '../components/ui/GlowCard';
 import { AnimatedButton } from '../components/ui/AnimatedButton';
 
@@ -17,9 +17,9 @@ const sections = [
   { id: 'start', title: '9. Get Started', icon: <Play size={18} /> },
 ];
 
-function SparklesIcon({ size }: { size: number }) {
+function SparklesIcon({ size, className = '' }: { size: number, className?: string }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
     </svg>
   );
@@ -86,7 +86,6 @@ const AccordionItem = ({ question, answer }: { question: string, answer: string 
 };
 
 export const DocsPage = () => {
-  const navigate = useNavigate();
   const [activeSection, setActiveSection] = useState('intro');
   const [showTopBtn, setShowTopBtn] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);

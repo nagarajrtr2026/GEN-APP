@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 export const DynamicTable = ({ pageName }: { pageName: string }) => {
   const lower = pageName.toLowerCase();
