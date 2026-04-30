@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useAppStore } from '../store/useAppStore';
 import { GlowCard } from '../components/ui/GlowCard';
 
