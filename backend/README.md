@@ -4,7 +4,7 @@ AI-powered backend service that converts plain-English prompts into structured s
 
 ---
 
-## 🚀 Overview
+##  Overview
 
 Genora AI Backend is built with **FastAPI** and designed as a modular AI pipeline.
 
@@ -18,7 +18,7 @@ Then returns structured JSON architecture.
 
 ---
 
-## ✨ Features
+##  Features
 
 * Natural language prompt processing
 * Intent extraction pipeline
@@ -36,7 +36,7 @@ Then returns structured JSON architecture.
 
 ---
 
-## 🧱 Tech Stack
+##  Tech Stack
 
 * Python 3.11+
 * FastAPI
@@ -48,7 +48,7 @@ Then returns structured JSON architecture.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 backend/
@@ -70,7 +70,7 @@ backend/
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ### 1. Clone Repo
 
@@ -107,13 +107,13 @@ pip install -r requirements.txt
 
 ---
 
-## 🔐 Environment Variables
+##  Environment Variables
 
 Create `.env`
 
 ```env
 AI_PROVIDER=groq
-API_KEY=your_api_key_here
+API_KEY=api_key
 ```
 
 Supported providers:
@@ -125,7 +125,7 @@ Supported providers:
 
 ---
 
-## ▶️ Run Server
+##  Run Server
 
 ```bash
 python run.py
@@ -140,18 +140,17 @@ uvicorn app.main:app --reload
 Server runs at:
 
 ```text
-http://localhost:8000
+https://gen-app-u1l1.onrender.com
 ```
 
 Swagger Docs:
 
-```text
-http://localhost:8000/docs
+https://gen-app-u1l1.onrender.com/docs
 ```
 
 ---
 
-## 📡 API Endpoints
+## API Endpoints
 
 ### Health Check
 
@@ -187,7 +186,7 @@ GET /api/v1/history
 
 ---
 
-## 📤 Example Response
+##  Example Response
 
 ```json
 {
@@ -204,7 +203,7 @@ GET /api/v1/history
 
 ---
 
-## 🧠 Pipeline Flow
+##  Pipeline Flow
 
 ```text
 Prompt
@@ -218,7 +217,7 @@ Prompt
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ```bash
 pytest
@@ -226,16 +225,16 @@ pytest
 
 ---
 
-## 🚀 Deployment
+##  Deployment
 
 Recommended:
 
-* Backend: Render / Railway
-* Frontend: Vercel / Netlify
+* Backend: Render 
+* Frontend: Vercel 
 
 ---
 
-## 📌 Notes
+##  Notes
 
 * Use `.env` for API keys
 * Never commit secrets
