@@ -71,3 +71,4 @@ export default defineConfig([
   },
 ])
 ```
+versal live : https://gen-app-six.vercel.app/
