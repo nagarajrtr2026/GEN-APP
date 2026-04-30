@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { ChevronRight, Terminal, Copy, CheckCircle, ArrowUp, ChevronDown, Rocket, LayoutTemplate, Database, Lock, Search, BookOpen, Layers, Code, Play } from 'lucide-react';
