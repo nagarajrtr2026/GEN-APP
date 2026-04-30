@@ -71,4 +71,6 @@ export default defineConfig([
   },
 ])
 ```
-versal live : https://gen-app-six.vercel.app/
+versel live : https://gen-app-six.vercel.app/
+
+runnig command : npm run dev
