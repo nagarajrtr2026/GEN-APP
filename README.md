@@ -45,6 +45,7 @@ Then returns structured JSON architecture.
 * SQLite / PostgreSQL (optional)
 * Groq / Gemini / OpenAI provider support
 * REST API
+* vite--react
 
 ---
 
